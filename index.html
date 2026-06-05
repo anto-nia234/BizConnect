@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BizConnect | Discover Local Businesses</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- =====================
+       HEADER
+  ====================== -->
+
+    <header class="header">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <img src="images/logo.png" alt="BizConnect Logo">
+
+                <span>BizConnect</span>
+
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#businesses">Businesses</a></li>
+
+                <li><a href="#map-section">Map</a></li>
+
+                <li><a href="#submit-business">Submit Business</a></li>
+
+            </ul>
+
+            <div class="nav-actions">
+
+                <button id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+
+                <button id="menuBtn" class="menu-btn">
+                    ☰
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- =====================
+       HERO
+  ====================== -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Discover Trusted Local Businesses
+            </h1>
+
+            <p>
+                Explore restaurants, fashion stores,
+                salons and barbershops across
+                Port Harcourt and Bonny Island.
+            </p>
+
+            <a href="#businesses" class="hero-btn">
+                Explore Businesses
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+       STATISTICS
+  ====================== -->
+
+    <section class="stats">
+
+        <div class="stat-card">
+
+            <h2>20+</h2>
+
+            <p>Verified Businesses</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>2</h2>
+
+            <p>Locations</p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <h2>4</h2>
+
+            <p>Business Categories</p>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+       SEARCH & FILTERS
+  ====================== -->
+    <section class="search-filter">
+
+        <div class="filter-row">
+
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="Restaurant">Restaurants</option>
+                <option value="Fashion">Fashion Stores</option>
+                <option value="Salon">Salons</option>
+                <option value="Barber">Barbers</option>
+            </select>
+
+            <select id="locationFilter">
+                <option value="all">All Locations</option>
+                <option value="Port Harcourt">Port Harcourt</option>
+                <option value="Bonny Island">Bonny Island</option>
+            </select>
+
+        </div>
+
+        <div class="search-row">
+
+            <input type="text" id="searchInput" placeholder="Search businesses...">
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================
+       BUSINESS SECTION
+  ====================== -->
+
+    <section id="businesses" class="business-section">
+
+        <div class="section-title">
+
+            <h2>
+                Featured Businesses
+            </h2>
+
+            <p>
+                Verified businesses available on BizConnect.
+            </p>
+
+        </div>
+
+        <div id="businessContainer" class="business-grid">
+
+            <!-- Business Cards Here -->
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+       MAP SECTION
+  ====================== -->
+
+    <section id="map-section" class="map-section">
+
+        <div class="section-title">
+
+            <h2>
+                Business Locations
+            </h2>
+
+            <p>
+                Find businesses across Port Harcourt
+                and Bonny Island.
+            </p>
+
+        </div>
+
+        <div id="map"></div>
+
+    </section>
+
+    <!-- =====================
+       SUBMIT BUSINESS
+  ====================== -->
+
+    <section id="submit-business" class="submit-section">
+
+        <h2>
+            Own a Business?
+        </h2>
+
+        <p>
+            Submit your business details and
+            get listed on BizConnect.
+        </p>
+
+        <a href="#" class="submit-btn" id="googleFormLink">
+            Submit Business
+        </a>
+
+    </section>
+
+    <!-- =====================
+       FOOTER
+  ====================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <h3>BizConnect</h3>
+
+            <p>
+                Connecting local businesses
+                with customers.
+            </p>
+
+            <p>
+                © 2026 BizConnect.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- =====================
+       MODAL
+  ====================== -->
+
+    <div class="modal" id="businessModal">
+
+        <div class="modal-content">
+
+            <span class="close-btn">
+                &times;
+            </span>
+
+            <div id="modalBody">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- =====================
+       BACK TO TOP
+  ====================== -->
+
+    <button id="backToTop">
+
+        ↑
+
+    </button>
+
+    <!-- SCRIPTS -->
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="js/businesses.js"></script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
