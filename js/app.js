@@ -346,7 +346,7 @@ document
   .getElementById("googleFormLink")
   .setAttribute(
     "href",
-    "#"
+    "https://forms.gle/QZqLuqEncVpW87xY7"
   );
 
 /* ==========================
