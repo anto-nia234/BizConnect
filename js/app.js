@@ -62,7 +62,7 @@ function displayBusinesses(data) {
 
 
 function filterBusinesses() {
-  const searchBar = document.getElementById("searchBar");
+  const searchBar = document.getElementById("searchInput");
   const categoryFilter = document.getElementById("categoryFilter");
   const locationFilter = document.getElementById("locationFilter");
 
@@ -83,7 +83,7 @@ function filterBusinesses() {
   displayBusinesses(filtered);
 }
 
-const searchBarEl = document.getElementById("searchBar");
+const searchBarEl = document.getElementById("searchInput");
 if (searchBarEl) searchBarEl.addEventListener("input", filterBusinesses);
 
 const categoryFilterEl = document.getElementById("categoryFilter");
