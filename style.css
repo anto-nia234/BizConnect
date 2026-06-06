@@ -1,7 +1,3 @@
-/* ======================
-   RESET
-====================== */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +6,8 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 :root {
@@ -33,11 +31,10 @@ body {
   background: var(--bg);
   color: var(--text);
   transition: .3s;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-/* ======================
-   NAVBAR
-====================== */
 
 .header {
   position: sticky;
@@ -45,28 +42,31 @@ body {
   z-index: 1000;
   background: var(--card);
   box-shadow: var(--shadow);
+  width: 100%;
 }
 
 .navbar {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 15px 20px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative; 
 }
 
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .logo img {
-  width: 42px;
-  height: 42px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
+  mix-blend-mode: multiply;
 }
 
 .logo span {
@@ -78,7 +78,7 @@ body {
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 30px;
+  gap: 20px;
 }
 
 .nav-links a {
@@ -94,6 +94,8 @@ body {
 .nav-actions {
   display: flex;
   gap: 10px;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 #themeToggle,
@@ -104,38 +106,30 @@ body {
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .menu-btn {
   display: none;
 }
 
-/* ======================
-   HERO
-====================== */
 
 .hero {
-  min-height: 85vh;
-
+  min-height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
-  padding: 40px 20px;
-
-  background:
-    linear-gradient(rgba(0, 0, 0, .55),
-      rgba(0, 0, 0, .55)),
-    linear-gradient(135deg,
-      #1E3A8A,
-      #14B8A6);
-
+  padding: 60px 20px;
+  background: linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .55)),
+              linear-gradient(135deg, #1E3A8A, #14B8A6);
   color: white;
+  width: 100%;
 }
 
 .hero-content {
   max-width: 800px;
+  width: 100%;
 }
 
 .hero h1 {
@@ -157,27 +151,22 @@ body {
   padding: 14px 30px;
   border-radius: 10px;
   font-weight: 600;
+  transition: .2s;
 }
 
 .hero-btn:hover {
   transform: translateY(-3px);
 }
 
-/* ======================
-   STATS
-====================== */
 
 .stats {
   max-width: 1200px;
   margin: auto;
-
   padding: 60px 20px;
-
   display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(220px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
+  width: 100%;
 }
 
 .stat-card {
@@ -197,14 +186,12 @@ body {
   margin-top: 10px;
 }
 
-/* ======================
-   SEARCH FILTER
-====================== */
 
 .search-filter {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
+  width: 100%;
 }
 
 .filter-row {
@@ -212,6 +199,7 @@ body {
   gap: 15px;
   justify-content: center;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .filter-row select {
@@ -219,11 +207,14 @@ body {
   padding: 14px;
   border-radius: 10px;
   border: 1px solid #ddd;
+  background: var(--card);
+  color: var(--text);
 }
 
 .search-row {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .search-row input {
@@ -233,15 +224,15 @@ body {
   border-radius: 30px;
   border: 1px solid #ddd;
   font-size: 16px;
+  background: var(--card);
+  color: var(--text);
 }
 
-/* ======================
-   SECTION TITLES
-====================== */
 
 .section-title {
   text-align: center;
   margin-bottom: 40px;
+  padding: 0 20px;
 }
 
 .section-title h2 {
@@ -249,35 +240,29 @@ body {
   margin-bottom: 10px;
 }
 
-/* ======================
-   BUSINESS SECTION
-====================== */
-
 .business-section {
   max-width: 1200px;
   margin: auto;
   padding: 60px 20px;
+  width: 100%;
 }
 
 .business-grid {
   display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(280px, 1fr));
-
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  width: 100%;
 }
-
-/* ======================
-   BUSINESS CARD
-====================== */
 
 .business-card {
   background: var(--card);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow);
-
   transition: .3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .business-card:hover {
@@ -292,32 +277,19 @@ body {
 
 .business-info {
   padding: 20px;
-}
-
-.verified-badge{
-    display:inline-block;
-    margin-top:12px;
-    margin-bottom:12px;
-
-    padding:8px 16px;
-
-    border-radius:25px;
-
-    background:linear-gradient(
-        135deg,
-        #10b981,
-        #059669
-    );
-
-    color:white;
-    font-size:13px;
-    font-weight:600;
-
-    box-shadow:0 4px 10px rgba(16,185,129,.25);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .business-info h3 {
   margin-bottom: 10px;
+}
+
+/* Rating line style hook */
+.business-rating {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
 }
 
 .business-info p {
@@ -325,17 +297,28 @@ body {
   line-height: 1.5;
 }
 
+.verified-badge {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding: 8px 16px;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(16,185,129,.25);
+  align-self: flex-start;
+}
+
 .view-btn {
   width: 100%;
-  margin-top: 15px;
-
+  margin-top: auto; /* Aligns buttons horizontally on the card base */
   border: none;
   background: var(--primary);
   color: white;
-
   padding: 12px;
   border-radius: 8px;
-
   cursor: pointer;
 }
 
@@ -343,12 +326,10 @@ body {
   background: var(--secondary);
 }
 
-/* ======================
-   MAP
-====================== */
 
 .map-section {
   padding: 60px 20px;
+  width: 100%;
 }
 
 #map {
@@ -357,15 +338,13 @@ body {
   overflow: hidden;
   max-width: 1200px;
   margin: auto;
+  width: 100%;
 }
-
-/* ======================
-   SUBMIT
-====================== */
 
 .submit-section {
   text-align: center;
   padding: 80px 20px;
+  width: 100%;
 }
 
 .submit-section h2 {
@@ -379,55 +358,38 @@ body {
 .submit-btn {
   display: inline-block;
   text-decoration: none;
-
   background: var(--secondary);
   color: white;
-
   padding: 14px 30px;
   border-radius: 10px;
 }
-
-/* ======================
-   FOOTER
-====================== */
 
 footer {
   background: var(--card);
   padding: 30px;
   text-align: center;
+  width: 100%;
 }
 
 .footer-content h3 {
   margin-bottom: 10px;
 }
 
-/* ======================
-   MODAL
-====================== */
-
 .modal {
   display: none;
-
   position: fixed;
   inset: 0;
-
   background: rgba(0, 0, 0, .7);
-
   z-index: 2000;
 }
 
 .modal-content {
   background: var(--card);
-
   width: 90%;
   max-width: 700px;
-
   margin: 50px auto;
-
   padding: 25px;
-
   border-radius: 16px;
-
   position: relative;
 }
 
@@ -435,41 +397,26 @@ footer {
   position: absolute;
   right: 20px;
   top: 10px;
-
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* ======================
-   BACK TO TOP
-====================== */
-
 #backToTop {
   position: fixed;
-
   right: 20px;
   bottom: 20px;
-
   width: 50px;
   height: 50px;
-
   border: none;
   border-radius: 50%;
-
   background: var(--primary);
   color: white;
-
   cursor: pointer;
-
   display: none;
 }
 
-/* ======================
-   MOBILE
-====================== */
 
-@media(max-width:768px) {
-
+@media (max-width: 768px) {
   .hero h1 {
     font-size: 2.2rem;
   }
@@ -482,44 +429,60 @@ footer {
     display: block;
   }
 
+  /* Dropdown card architecture for mobile menus */
   .nav-links {
     display: none;
-
     position: absolute;
     right: 20px;
     top: 75px;
-
     flex-direction: column;
-
     width: 220px;
-
     background: var(--card);
-
     padding: 20px;
-
-    border-radius: 12px;
-
+    border-radius: 15px;
     box-shadow: var(--shadow);
+    z-index: 1010;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-
-
-
+  /* Stack layout row elements */
   .filter-row {
     flex-direction: column;
     align-items: center;
+    padding: 0 10px;
   }
-
+.custom-dropdown{
+  max-width: 100%;
+}
   .filter-row select {
     width: 100%;
+  }
+
+  .search-row {
+    padding: 0 10px;
   }
 
   .search-row input {
     width: 100%;
   }
 
+  .stats {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+
+  .business-section {
+    padding: 40px 10px;
+  }
+
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #map {
+    height: 350px;
+  }
 }

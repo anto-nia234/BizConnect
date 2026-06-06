@@ -3,11 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <title>BizConnect | Discover Local Businesses</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -19,9 +20,7 @@
 
 <body>
 
-    <!-- =====================
-       HEADER
-  ====================== -->
+
 
     <header class="header">
 
@@ -63,9 +62,7 @@
 
     </header>
 
-    <!-- =====================
-       HERO
-  ====================== -->
+
 
     <section id="home" class="hero">
 
@@ -81,17 +78,15 @@
                 Port Harcourt and Bonny Island.
             </p>
 
-            <a href="#businesses" class="hero-btn">
-                Explore Businesses
+            <a href="https://forms.gle/QZqLuqEncVpW87xY7" class="hero-btn" target="_blank">
+                Submit Your Business
             </a>
 
         </div>
 
     </section>
 
-    <!-- =====================
-       STATISTICS
-  ====================== -->
+
 
     <section class="stats">
 
@@ -121,9 +116,7 @@
 
     </section>
 
-    <!-- =====================
-       SEARCH & FILTERS
-  ====================== -->
+
     <section class="search-filter">
 
         <div class="filter-row">
@@ -153,9 +146,7 @@
     </section>
 
 
-    <!-- =====================
-       BUSINESS SECTION
-  ====================== -->
+
 
     <section id="businesses" class="business-section">
 
@@ -179,9 +170,7 @@
 
     </section>
 
-    <!-- =====================
-       MAP SECTION
-  ====================== -->
+
 
     <section id="map-section" class="map-section">
 
@@ -202,9 +191,6 @@
 
     </section>
 
-    <!-- =====================
-       SUBMIT BUSINESS
-  ====================== -->
 
     <section id="submit-business" class="submit-section">
 
@@ -217,18 +203,13 @@
             get listed on BizConnect.
         </p>
 
-        <a href="https://forms.gle/QZqLuqEncVpW87xY7" 
-        class="submit-btn" id="googleFormLink"
-        target="_blank">
-        
+        <a href="https://forms.gle/QZqLuqEncVpW87xY7" class="submit-btn" id="googleFormLink" target="_blank">
+
             Submit Business
         </a>
 
     </section>
 
-    <!-- =====================
-       FOOTER
-  ====================== -->
 
     <footer>
 
@@ -250,15 +231,12 @@
 
     </footer>
 
-    <!-- =====================
-       MODAL
-  ====================== -->
 
     <div class="modal" id="businessModal">
 
         <div class="modal-content">
 
-            <span class="close-btn">
+            <span class="close-btn" onclick="closeModal()">
                 &times;
             </span>
 
@@ -270,9 +248,7 @@
 
     </div>
 
-    <!-- =====================
-       BACK TO TOP
-  ====================== -->
+
 
     <button id="backToTop">
 
@@ -280,7 +256,7 @@
 
     </button>
 
-    <!-- SCRIPTS -->
+
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
