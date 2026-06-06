@@ -8,7 +8,7 @@ const businesses = [
         address: "38 Forces Ave, Old GRA, Port Harcourt, Rivers",
         phone: "08106622000",
         hours: "Open • Closes 10:30 PM",
-        image: "images/asia-town.jpg",
+        image: "Images/asia-town.jpg",
         verified: true,
         rating: 4.8, //⭐️ ADD THIS LINE
         lat: 4.78452, 
@@ -23,7 +23,7 @@ const businesses = [
         address: "Port Harcourt - Aba Expressway, City Centre, Port Harcourt",
         phone: "08070911111",
         hours: "Open • Closes 1:00 AM",
-        image: "images/michael-garden.jpg",
+        image: "Images/michael-garden.jpg",
         verified: true,
         rating: 4.7, //⭐️ ADD THIS LINE
         lat: 4.83615,
@@ -38,7 +38,7 @@ const businesses = [
         address: "Garden City Mall, Aba Express Road, Rumuola",
         phone: "07025256576",
         hours: "Open • Closes 11:00 PM",
-        image: "images/michael-terrace.jpg",
+        image: "Images/michael-terrace.jpg",
         verified: true,
         rating: 4.9, //⭐️ ADD THIS LINE
         lat: 4.83604,
@@ -53,7 +53,7 @@ const businesses = [
         address: "139 Port Harcourt - Aba Expy, Umueme, Port Harcourt",
         phone: "08098838888",
         hours: "Open • Closes 12:00 AM",
-        image: "images/piano-club.jpg",
+        image: "Images/piano-club.jpg",
         verified: true,
         rating: 4.8, //⭐️ ADD THIS LINE
         lat: 4.81945,
@@ -68,7 +68,7 @@ const businesses = [
         address: "65 Evo Road, New GRA, Port Harcourt",
         phone: "09166644633",
         hours: "Open • Closes 3:00 AM",
-        image: "images/maseraty65.jpg",
+        image: "Images/maseraty65.jpg",
         verified: true,
         rating: 4.4, //⭐️ ADD THIS LINE
         lat: 4.82065,
@@ -83,7 +83,7 @@ const businesses = [
         address: "Bonny Island, Rivers State",
         phone: "08129125100",
         hours: "Open • Closes 9:30 PM",
-        image: "images/promise-fastfood.jpg",
+        image: "Images/promise-fastfood.jpg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.43390,
@@ -98,7 +98,7 @@ const businesses = [
         address: "Bonny Island, Rivers State",
         phone: "09064580695",
         hours: "Open • Closes 11:00 PM",
-        image: "images/alali.jpg",
+        image: "Images/alali.jpg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.43499,
@@ -113,7 +113,7 @@ const businesses = [
         address: "Bonny Island, Rivers State",
         phone: "07014782666",
         hours: "Open • Closes 9:00 PM",
-        image: "images/dbn-canteen.jpg",
+        image: "Images/dbn-canteen.jpg",
         verified: true,
         rating: 4.0, //⭐️ ADD THIS LINE
         lat: 4.38685,
@@ -128,7 +128,7 @@ const businesses = [
         address: "Beside SDP Secretariat, Bonny Island",
         phone: "07068620602",
         hours: "Open 24 Hours",
-        image: "images/amgreen.jpg",
+        image: "Images/amgreen.jpg",
         verified: true,
         rating: 4.6, //⭐️ ADD THIS LINE
         lat: 4.42985,
@@ -143,7 +143,7 @@ const businesses = [
         address: "Wilbros Pipeline Road, Bonny",
         phone: "08035310490",
         hours: "Open • Closes 7:00 PM",
-        image: "images/alexis.jpg",
+        image: "Images/alexis.jpg",
         verified: true,
         rating: 4.2, //⭐️ ADD THIS LINE
         lat: 4.42642,
@@ -158,7 +158,7 @@ const businesses = [
         address: "112 Mission Road, Bonny",
         phone: "08162020542",
         hours: "Open • Closes 8:30 PM",
-        image: "images/ankara-boss.jpg",
+        image: "Images/ankara-boss.jpg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.44005,
@@ -173,7 +173,7 @@ const businesses = [
         address: "Mission Road, King Williams Road, Bonny",
         phone: "08066195759",
         hours: "Open • Closes 11:00 PM",
-        image: "images/ebuka-classic.jpg",
+        image: "Images/ebuka-classic.jpg",
         verified: true,
         rating: 4.6, //⭐️ ADD THIS LINE
         lat: 4.45026,
@@ -188,7 +188,7 @@ const businesses = [
         address: "Along Akiama Road, Ghana Woman Street, Bonny",
         phone: "08064673171",
         hours: "Open • Closes 8:30 PM",
-        image: "images/gracedecca.jpg",
+        image: "Images/gracedecca.jpg",
         verified: true,
         rating: 4.2, //⭐️ ADD THIS LINE
         lat: 4.42911,
@@ -203,7 +203,7 @@ const businesses = [
         address: "Elechi Area, Port Harcourt",
         phone: "08170161403",
         hours: "Open • Closes 8:00 PM",
-        image: "images/ouch.jpg",
+        image: "Images/ouch.jpg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.82094,
@@ -218,7 +218,7 @@ const businesses = [
         address: "101A Brookstone Close, GRA Phase 3, Port Harcourt",
         phone: "08183356528",
         hours: "Open • Closes 6:00 PM",
-        image: "images/dash-luxury.jpg",
+        image: "Images/dash-luxury.jpg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.82322,
@@ -233,7 +233,7 @@ const businesses = [
         address: "37 Onne Road, GRA Phase 2, Port Harcourt",
         phone: "09087234293",
         hours: "Open • Closes 7:00 PM",
-        image: "images/hairven.jpeg",
+        image: "Images/hairven.jpeg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.81527,
@@ -248,7 +248,7 @@ const businesses = [
         address: "4 Worlu Street, D-Line, Port Harcourt",
         phone: "07030764749",
         hours: "Open 24 Hours",
-        image: "images/precious-salon.jpg",
+        image: "Images/precious-salon.jpg",
         verified: true,
         rating: 4.1, //⭐️ ADD THIS LINE
         lat: 4.81288,
@@ -263,7 +263,7 @@ const businesses = [
         address: "12 Tombia Street, GRA Phase 2, Port Harcourt",
         phone: "08033116556",
         hours: "Open",
-        image: "images/gingerblu.jpg",
+        image: "Images/gingerblu.jpg",
         verified: true,
         rating: 4.3, //⭐️ ADD THIS LINE
         lat: 4.82119,
@@ -278,7 +278,7 @@ const businesses = [
         address: "Opposite Winners Chapel Headquarters, Bonny",
         phone: "08129651135",
         hours: "Open • Closes 7:00 PM",
-        image: "images/rida.jpg",
+        image: "Images/rida.jpg",
         verified: true,
         rating: 4.9, //⭐️ ADD THIS LINE
         lat: 4.42389,
@@ -293,7 +293,7 @@ const businesses = [
         address: "12 Wilbros Pipeline Road, Bonny",
         phone: "08146484098",
         hours: "Open • Closes 11:00 PM",
-        image: "images/steady-barber.jpg",
+        image: "Images/steady-barber.jpg",
         verified: true,
         rating: 4.5, //⭐️ ADD THIS LINE
         lat: 4.42688,
@@ -308,7 +308,7 @@ const businesses = [
         address: "4 Abacha Road, Elechi, Port Harcourt",
         phone: "09054585350",
         hours: "Open • Closes 12:00 AM",
-        image: "images/black-empire.jpg",
+        image: "Images/black-empire.jpg",
         verified: true,
         rating: 5.0, //⭐️ ADD THIS LINE
         lat: 4.81630,
