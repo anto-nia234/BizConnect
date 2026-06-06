@@ -66,16 +66,19 @@ function filterBusinesses() {
   const categoryFilter = document.getElementById("categoryFilter");
   const locationFilter = document.getElementById("locationFilter");
 
-  const searchVal = searchBar ? searchBar.value.toLowerCase() : "";
-  const categoryVal = categoryFilter ? categoryFilter.value : "";
-  const locationVal = locationFilter ? locationFilter.value : "";
+  const searchVal = searchBar ? searchBar.value.toLowerCase() .trim() : "";
+  const categoryVal = categoryFilter ? categoryFilter.value : "all";
+  const locationVal = locationFilter ? locationFilter.value : "all";
 
   const filtered = businesses.filter(business => {
+    const businessName = business.name ? business.name.toLowerCase() : "";
+    const businessAddress = business.address ? business.address.toLowerCase() : "";
+    
     const matchesSearch = !searchVal || 
                           business.name.toLowerCase().includes(searchVal) || 
                           business.address.toLowerCase().includes(searchVal);
-    const matchesCategory = categoryVal === "" || business.category === categoryVal;
-    const matchesLocation = locationVal === "" || business.location === locationVal;
+    const matchesCategory = categoryVal === "all" || categoryVal === "" || business.category === categoryVal;
+    const matchesLocation = locationVal === "all" || locationVal === "" || business.location === locationVal;
 
     return matchesSearch && matchesCategory && matchesLocation;
   });
