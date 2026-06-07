@@ -136,7 +136,7 @@ function showDetails(id) {
 
   // Injecting the complete set of traced properties from your array
   modalBody.innerHTML = `
-    <div style="display: flex; flex-direction: column; gap: 18px; font-family: 'Poppins', sans-serif;">
+    <div style="display: flex; flex-direction: column; gap: 18px; font-family: 'Poppins', sans-serif; min-height: max-content; padding-bottom: padding-bottom: 20px;">
       
       <div style="width: 92%; height: 200px; overflow: hidden; border-radius: 12px; position: relative;">
         <img src="${business.image}" alt="${business.name}" 
