@@ -1,4 +1,3 @@
-
 function displayBusinesses(data) {
   const businessContainer = document.getElementById("businessContainer");
   if (!businessContainer) return;
@@ -30,7 +29,7 @@ function displayBusinesses(data) {
         starsHTML += '<i class="far fa-star" style="color: #D3D3D3; margin-right: 2px;"></i>';
     }
 
-   
+    // B. INJECT GENERATED HTML CARD TEMPLATE
     businessContainer.innerHTML += `
         <div class="business-card">
             <img
@@ -101,14 +100,14 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     document.body.classList.toggle("dark");
     
-    
+    // Find the icon tag inside the button
     const icon = themeToggle.querySelector("i");
     if (icon) {
       if (document.body.classList.contains("dark")) {
-
+        // Class for the Sun icon when in Dark Mode
         icon.className = "fas fa-sun";
       } else {
-        
+        // Class for the Moon icon when in Light Mode
         icon.className = "fas fa-moon";
       }
     }
@@ -117,25 +116,6 @@ if (themeToggle) {
 
 
 function showDetails(id) {
-  
-  const business = businesses.find(b => b.id === id);
-  if (!business) {
-    console.error("Business data could not be traced for ID:", id);
-    return;
-  }
-
-  const modal = document.getElementById("businessModal");
-  const modalBody = document.getElementById("modalBody");
-  if (!modal || !modalBody) return;
-
-
-  const detailedAddress = business.address || business.location || "No address listed";
-  const verifiedBadge = business.verified 
-    ? `<span style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">✓ Verified</span>` 
-    : `<span style="background: #f1f5f9; color: #64748b; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Standard Listing</span>`;
-
- 
- function showDetails(id) {
   // Traces and finds the exact business matching the clicked ID
   const business = businesses.find(b => b.id === id);
   if (!business) {
@@ -155,15 +135,15 @@ function showDetails(id) {
 
   // Injecting the complete set of traced properties from your array
   modalBody.innerHTML = `
-    <div style="display: flex; flex-direction: column; gap: 18px; font-family: 'Poppins', sans-serif; width: 100%; min-height: max-content; padding-bottom: 20px;">
+    <div style="display: flex; flex-direction: column; gap: 18px; font-family: 'Poppins', sans-serif; min-height: max-content; padding-bottom: 20px;">
       
-      <div style="width: 100%; height: 220px; overflow: hidden; border-radius: 12px; position: relative;">
+      <div style="width: 92%; height: 200px; overflow: hidden; border-radius: 12px; position: relative;">
         <img src="${business.image}" alt="${business.name}" 
              style="width: 100%; height: 100%; object-fit: cover;" 
              onerror="this.src='https://placehold.co/600x400?text=BizConnect'">
       </div>
       
-      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; wrap: wrap; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px;">
         <h2 style="margin: 0; color: #1E3A8A; font-size: 1.5rem; font-weight: 700;">${business.name}</h2>
         ${verifiedBadge}
       </div>
@@ -218,11 +198,13 @@ function showDetails(id) {
   
   modal.style.display = "flex"; 
 }
+
 function closeModal() {
   const modal = document.getElementById("businessModal");
   if (modal) modal.style.display = "none";
 }
 
+// Close modal if user clicks grayed overlay area background
 window.addEventListener("click", (e) => {
   const modal = document.getElementById("businessModal");
   if (modal && e.target === modal) {
@@ -302,4 +284,5 @@ if (document.getElementById("map")) {
 
 displayBusinesses(businesses);
 
-}
+
+
