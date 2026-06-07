@@ -135,6 +135,25 @@ function showDetails(id) {
     : `<span style="background: #f1f5f9; color: #64748b; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Standard Listing</span>`;
 
  
+ function showDetails(id) {
+  // Traces and finds the exact business matching the clicked ID
+  const business = businesses.find(b => b.id === id);
+  if (!business) {
+    console.error("Business data could not be traced for ID:", id);
+    return;
+  }
+
+  const modal = document.getElementById("businessModal");
+  const modalBody = document.getElementById("modalBody");
+  if (!modal || !modalBody) return;
+
+  // Trace variables or apply perfect fallbacks
+  const detailedAddress = business.address || business.location || "No address listed";
+  const verifiedBadge = business.verified 
+    ? `<span style="background: #e0f2fe; color: #0369a1; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; display: inline-flex; align-items: center; gap: 4px;">✓ Verified</span>` 
+    : `<span style="background: #f1f5f9; color: #64748b; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Standard Listing</span>`;
+
+  // Injecting the complete set of traced properties from your array
   modalBody.innerHTML = `
     <div style="display: flex; flex-direction: column; gap: 18px; font-family: 'Poppins', sans-serif; width: 100%; min-height: max-content; padding-bottom: 20px;">
       
@@ -143,9 +162,8 @@ function showDetails(id) {
              style="width: 100%; height: 100%; object-fit: cover;" 
              onerror="this.src='https://placehold.co/600x400?text=BizConnect'">
       </div>
-  `;
       
-      <div style="display: flex; justify-content: space-between; align-items: center; wrap: wrap; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 2px solid #f1f5f9; padding-bottom: 12px;">
         <h2 style="margin: 0; color: #1E3A8A; font-size: 1.5rem; font-weight: 700;">${business.name}</h2>
         ${verifiedBadge}
       </div>
@@ -200,7 +218,6 @@ function showDetails(id) {
   
   modal.style.display = "flex"; 
 }
-
 function closeModal() {
   const modal = document.getElementById("businessModal");
   if (modal) modal.style.display = "none";
