@@ -391,6 +391,8 @@ footer {
   padding: 25px;
   border-radius: 16px;
   position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close-btn {
