@@ -301,3 +301,5 @@ if (document.getElementById("map")) {
 }
 
 displayBusinesses(businesses);
+
+}
